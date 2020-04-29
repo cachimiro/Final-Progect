@@ -1,0 +1,106 @@
+{% load bootstrap_tags %}
+{% load static from staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap-theme.min.css" integrity="sha384-6pzBo3FDv/PJ8r2KRkGHifhEocL+1X2rVCTTkUfGk7/0pbek5mMa1upzvWbrUbOZ" crossorigin="anonymous">
+<link rel="stylesheet" href="{% static 'css/main.css' %}" type="text/css" />
+    <title>Document</title>
+</head>
+<body>
+<header class="header-style">
+<div id="navbar">
+<nav class="navegation-style">
+<div class="logo">
+<h4> Cachi Travel</h4>
+</div>
+<ul class="nav-links">
+<li>
+<a href="#">Homes</a>
+</li>
+<li>
+<a href="#">Posts</a>
+</li>
+<li>
+<a href="#">About Us</a>
+</li>
+<li>
+<a href="#">Meet The Team</a>
+</li>
+<a class="nav-icon" href="javascript:void(0);"><span></span><span></span><span></span></a>
+</ul>
+<div class="burger">
+<div class="line1"></div>
+<div class="line2"></div>
+<div class="line3"></div>
+</div>
+</nav>
+</div>
+<!-- this code is for the burget menu where it will diplay more information -->
+
+<div class="full-navegation">
+		<div class="logos"><a href="">
+				<h2 class="style-title"> Shop</h2>
+			</a></div>
+		<nav class="navegation2">
+			<ul>
+            <div class="container">
+            <div class="row">
+            <div class="col-sm-12 col-md-6 col-lg-6">
+				<li><a href="">Home</a></li>
+                </div>
+                <div class="col-sm-12 col-md-6 col-lg-6">
+				<li><a href="">What We Do</a></li>
+                </div>
+                <div class="col-sm-12 col-md-6 col-lg-6">
+				<li><a href="">Team</a></li>
+                </div>
+                <div class="col-sm-12 col-md-6 col-lg-6">
+				<li><a href="">Products</a></li>
+                </div>
+                <div class="col-sm-12 col-md-6 col-lg-6">
+                 <li><a href="#">Logout</a></li>
+                 </div>
+                 <div class="col-sm-12 col-md-6 col-lg-6">
+				<li><a href="">Account</a></li>
+                </div>
+                  <div class="col-sm-12 col-md-6 col-lg-6">
+                 <li><a href="">Login</a></li>
+                 </div>
+                 <div class="col-sm-12 col-md-6 col-lg-6">
+                 <li><a href="">Register</a></li>
+                 </div>
+                <div class="col-sm-12 col-md-12 col-lg-12">
+				<li><a href="">Contact</a></li>
+                </div>
+                </div>
+                </div>
+			</ul>
+		</nav>
+		<ul class="social-icons list-inline">
+			<li><a href=""><i class="fa fa-facebook"></i></a></li>
+			<li><a href=""><i class="fa fa-instagram"></i></a></li>
+			<li><a href=""><i class="fa fa-linkedin"></i></a></li>
+		</ul>
+		<div class="corner-circle">
+			<a href="javascript:void(0);" class="close-nav"><span></span><span></span></a>
+		</div>
+	</div>
+
+</header>
+     {% block content %} {% endblock %}
+     <!-- Latest compiled and minified JavaScript -->
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script src="{% static 'js/main.js' %}"> </script>
+</body>
+</html>

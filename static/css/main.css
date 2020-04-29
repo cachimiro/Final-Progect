@@ -1,0 +1,309 @@
+.header-style{
+position: relative;
+width: 100%;
+overflow: hidden;
+height: 800px;
+}
+@media only screen and (max-width: 1100px){
+    .header-style{
+        height:100%;
+    }
+}
+    
+
+
+.navegation-style{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 10vh;
+    background-color: #62cfd6;
+    font-family: 'Gotu', sans-serif;
+}
+.logo{
+    color: #fafafa;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-size: 20px;
+}
+.nav-links{
+    display: flex;
+    justify-content: space-around;
+    width: 40%;
+}
+.nav-links a {
+    color: #fafafa;
+    text-decoration: none;
+    letter-spacing: 3px;
+    font-weight: bold;
+    font-size: 18px;
+}
+.nav-links li{
+    list-style: none;
+}
+.burger{
+    display: none;
+}
+@media only screen and (max-width: 1200px){
+    .nav-links{
+        width:60%;
+    }
+}
+/* this bit of code is to make the nav bar stiky */
+.sticky{
+    width: 100%;
+    position: fixed;
+    box-shadow: 0 10px 10px 10px -10px rgba(0, 0, 0, 0.35);
+    transition: all ease-in-out 2s;
+    animation-name: fadeNaveBar;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+    z-index: 99;
+    
+}
+@keyframes fadeNaveBar{
+    from{
+        opacity: 0;
+        -webkit-transform: translate3d(0,-100%,0);
+        transform: translate3d(0,-100%,0);
+    }
+    to{
+        opacity: 1;
+        transform: none;
+        -webkit-transform: none;
+        -o-transform: none;
+    }
+}
+
+/* this code is for the styling of the burger that will have move information menu icon */
+.nav-icon{
+    position: absolute;
+    top: 10px;
+    right: 28px;
+    padding: 4px;
+    width: 40px;
+    z-index: 1;
+    cursor: pointer;
+}
+.nav-icon span{
+    background: #fafafa;
+    width: 30px;
+    height: 2px;
+    display: block;
+    transition: 200ms linear all;
+}
+.nav-icon span:nth-child(1),
+.nav-icon span:nth-child(3){
+    width:18px;
+    margin: 0 auto;
+}
+.nav-icon span:nth-child(2){
+    margin: 5px 0px;
+    width: 30px
+}
+.nav-icon:hover span:nth-child(1),
+.nav-icon:hover span:nth-child(3){
+    width: 28px;
+}
+
+/* this code is for styling the burger menu */
+.burger div{
+    width: 25px;
+    height: 2px;
+    background-color: #fafafa;
+    margin: 5px;
+    transition: all 0.5s ease
+}
+@media only screen and (max-width: 768px){
+    body{
+        overflow-x: hidden !important;
+    }
+    .nav-links{
+        position: absolute;
+        right: 0px;
+        height: 92vh;
+        top: 8vh;
+        background-color: #62cfd6;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 50%;
+        transform: translateX(100%);
+        transition: transform 0.5s ease-in;
+        z-index: 99;
+    }
+    .nav-links li {
+        opacity: 0;
+    }
+    .burger{
+        display: block;
+    }
+}
+.nav-active{
+    transform: translateX(0%);
+}
+@keyframes navLinkFade{
+    from{
+        opacity: 0;
+        transform: translateX(50px)
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0px)
+    }
+}
+.toggle .line1{
+    transform: rotate(-45deg) translate(-5px,6px);
+}
+.toggle .line2{
+    opacity: 0;
+}
+.toggle .line3{
+   transform: rotate(45deg) translate(-5px,-6px); 
+}
+
+/* this code is for the burger menu that will have more information */
+.full-navegation{
+    background: #62cfd682;
+    color: #18191d;
+    position: fixed;
+    top: 100px;
+    left: 0px;
+    height: 100%;
+    width: 100%;
+    padding: 58px;
+    z-index: 99 !important;
+    overflow-x: hidden;
+    visibility: hidden;
+    opacity: 0;
+    transform: translateY(-100px);
+    transition: all 400ms ease-in-out;
+}
+.open-burger-menu{
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+    transition: all 400ms ease-in-out;
+    z-index: 99;
+}
+.full-navegation .logos{
+    display: flex;
+    justify-content: center;
+    padding: 4rem;
+    
+}
+.style-title{
+    font-family: 'Indie Flower', cursive;
+    color: #18191d;
+    font-size: 60px;
+    text-transform: uppercase;
+
+}
+ a:hover{
+text-decoration: none;
+}
+.navegation2{
+    display: flex;
+    justify-content: center;
+}
+.navegation2 ul{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    max-width: 700px;
+}
+.navegation2 ul li{
+    display: flex;
+    flex: 50%;
+    background-color: #f5f5f5c7;
+    padding: 1rem;
+    margin-bottom: 10px;
+    margin-right: 10px ;
+    transition: all 500ms;
+}
+.navegation2 ul li a{
+    font-family: 'Gotu', sans-serif;
+    font-size: 20px;
+    color: #18191d;
+}
+.navegation2 ul li:hover{
+background: #ddc0ef;
+}
+/* code for styling the socil media icons */
+.social-icons a{
+    color: whitesmoke;
+    border: 5px solid whitesmoke;
+    width: 50px;
+    height: 50px;
+    line-height: 40px;
+    font-size: 20px;
+    display: inherit;
+    text-align: center;
+    border-radius: 50px;
+    transition: all ease 1s;
+    margin-top: 40px;
+}
+.social-icons a:hover i{
+    color: #000000;
+    margin-top: -10px;
+    border-color: #000000;
+}
+.social-icons a:hover {
+    color: #000000;
+    margin-top: -10px;
+    border-color: #000000;
+}
+ul .social-icons .list-inline{
+    text-align: center;
+    margin-top: 22px;
+}
+.list-inline {
+    text-align: center !important;
+}
+@media only screen and (max-width: 600px) {
+  .list-inline {
+    padding-left: 0px !important;
+}
+}
+.list-inline > li{
+    display: inline-block;
+    padding-right: 5px;
+    padding-left: 5px;
+}
+
+/* code for styling the x in the burger menu */
+.corner-circle{
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 120px;
+    width: 120px;
+    background-color: whitesmoke;
+    border-radius: 0 0 0 120px;
+    z-index: 2;
+}
+
+.close-nav{
+    display: block;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: 30px;
+    right: 30px;
+}
+
+.close-nav span{
+    background: #687575;
+    width: 30px;
+    height: 1px;
+    display: block;
+    position: absolute;
+    top: 16px;
+}
+
+.close-nav span:nth-child(1){
+    transform: rotate(45deg)
+}
+.close-nav span:nth-child(2){
+    transform: rotate(-45deg)
+}
